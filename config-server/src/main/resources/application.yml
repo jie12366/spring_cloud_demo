@@ -7,7 +7,23 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/jie12366/spring_cloud_demo   # ÅäÖÃgit²Ö¿âµÄµØÖ·
-          search-paths: config-repo                            # git²Ö¿âµØÖ·ÏÂµÄÏà¶ÔµØÖ·£¬¿ÉÒÔÅäÖÃ¶à¸ö£¬ÓÃ,·Ö¸î¡£
-          username: 2263509062@qq.com                           # git²Ö¿âµÄÕËºÅ
-          password: xiongyijie123456                            # git²Ö¿âµÄÃÜÂë
+          uri: https://github.com/jie12366/spring_cloud_demo   # é…ç½®gitä»“åº“
+          search-paths: config-repo                            # gitä»“åº“ä¸‹çš„ç›®å½•
+          username: 2263509062@qq.com                           # gitè´¦å·
+          password: xiongyijie123456                            # gitå¯†ç 
+    bus:
+      trace:
+        enabled: true # å¼€å¯æ¶ˆæ¯è·Ÿè¸ª
+  security:
+    user:
+      name: monJay
+      password: pwd
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: monJay
+    password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
